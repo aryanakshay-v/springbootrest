@@ -40,7 +40,12 @@ public class StudentService {
 			if(s.getId() == id) {
 				students.set(id, student);
 				return;
+
 			}
 		}
 	}
+	public void removeStudent(int id) {
+		students.removeIf(s -> s.getId() == id);
+	}
+
 }
