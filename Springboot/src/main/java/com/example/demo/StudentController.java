@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +41,26 @@ public class StudentController {
 	public void  deleteStudent(@PathVariable int id) {
 		studentService.removeStudent(id);
 	}
+    
+    @GetMapping("/")
+	public String home() {
+		return ("<h1> Welcome Home </h1>");
+		
+	}
+	
+	@GetMapping("/admin")
+	public String admin() {
+		return ("<h1> Welcome Admin </h1>");
+		
+	}
+	
+	@GetMapping("/user")
+	public String user() {
+		return ("<h1> Welcome User </h1>");
+		
+	}
+	
+	
 
     	
     	
